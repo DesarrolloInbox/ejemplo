@@ -1,5 +1,5 @@
 <div class="hero-list">
-  <app-articulo-heroe [heroe]="heroes[0]"></app-articulo-heroe>
-  <app-articulo-heroe [heroe]="heroes[1]"></app-articulo-heroe>
-  <app-articulo-heroe [heroe]="heroes[2]"></app-articulo-heroe>
+  <app-articulo-heroe [heroe]="heroes[0]" (cambioPoderes)="guardarPoderes($event)"></app-articulo-heroe>
+  <app-articulo-heroe [heroe]="heroes[1]" (cambioPoderes)="guardarPoderes($event)"></app-articulo-heroe>
+  <app-articulo-heroe [heroe]="heroes[2]" (cambioPoderes)="guardarPoderes($event)"></app-articulo-heroe>
 </div>
