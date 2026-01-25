@@ -1,5 +1,7 @@
 <div class="hero-list">
-  <app-articulo-heroe [heroe]="heroes[0]" (cambioPoderes)="guardarPoderes($event)"></app-articulo-heroe>
-  <app-articulo-heroe [heroe]="heroes[1]" (cambioPoderes)="guardarPoderes($event)"></app-articulo-heroe>
-  <app-articulo-heroe [heroe]="heroes[2]" (cambioPoderes)="guardarPoderes($event)"></app-articulo-heroe>
+  @for (heroe of heroes; track heroe.id) {
+    <app-articulo-heroe [heroe]="heroe" (cambioPoderes)="guardarPoderes($event)"></app-articulo-heroe>
+  }@empty {
+    <p>No hay heroes</p>
+  }
 </div>
